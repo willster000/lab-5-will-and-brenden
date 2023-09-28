@@ -7,16 +7,20 @@ public class StableMatching {
         List<Company> companies = new ArrayList<>();
 
         // Initialize programmers and companies with their preferences
-        Programmer p1 = new Programmer("P1", Arrays.asList("C1", "C2", "C3"));
-        Programmer p2 = new Programmer("P2", Arrays.asList("C2", "C1", "C3"));
-        Programmer p3 = new Programmer("P3", Arrays.asList("C2", "C3", "C1"));
+        Programmer p1 = new Programmer("1", Arrays.asList("E", "A", "D", "B", "C"));
+        Programmer p2 = new Programmer("2", Arrays.asList("D", "E", "B", "A", "C"));
+        Programmer p3 = new Programmer("3", Arrays.asList("D", "B", "C", "E", "A"));
+        Programmer p4 = new Programmer("4", Arrays.asList("C", "B", "D", "A", "E"));
+        Programmer p5 = new Programmer("5", Arrays.asList("A", "D", "B", "C", "E"));
 
-        Company c1 = new Company("C1", Arrays.asList("P1", "P2", "P3"));
-        Company c2 = new Company("C2", Arrays.asList("P2", "P1", "P3"));
-        Company c3 = new Company("C3", Arrays.asList("P3", "P1", "P2"));
+        Company c1 = new Company("A", Arrays.asList("2", "5", "1", "3", "4"));
+        Company c2 = new Company("B", Arrays.asList("1", "2", "3", "4", "5"));
+        Company c3 = new Company("C", Arrays.asList("5", "3", "2", "1", "4"));
+        Company c4 = new Company("D", Arrays.asList("1", "3", "2", "4", "5"));
+        Company c5 = new Company("E", Arrays.asList("2", "3", "5", "4", "1"));
 
-        programmers.addAll(Arrays.asList(p1, p2, p3));
-        companies.addAll(Arrays.asList(c1, c2, c3));
+        programmers.addAll(Arrays.asList(p1, p2, p3, p4, p5));
+        companies.addAll(Arrays.asList(c1, c2, c3, c4, c5));
 
         Map<Programmer, Company> matching = findSatisfactoryMatching(programmers, companies);
 
