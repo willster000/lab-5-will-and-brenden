@@ -6,8 +6,11 @@ public class StableMatching {
         List<Programmer> programmers = new ArrayList<>();
         List<Company> companies = new ArrayList<>();
 
-        // Initialize programmers and companies with their preferences
-        Programmer p1 = new Programmer("1", Arrays.asList("E", "A", "D", "B", "C"));
+        // We have two templates with different numbers of companies and programmers 
+        // with different preferences. The algorithm should return satisfactory pairs
+        // for both templates. 
+         
+    /*  Programmer p1 = new Programmer("1", Arrays.asList("E", "A", "D", "B", "C"));
         Programmer p2 = new Programmer("2", Arrays.asList("D", "E", "B", "A", "C"));
         Programmer p3 = new Programmer("3", Arrays.asList("D", "B", "C", "E", "A"));
         Programmer p4 = new Programmer("4", Arrays.asList("C", "B", "D", "A", "E"));
@@ -20,7 +23,21 @@ public class StableMatching {
         Company c5 = new Company("E", Arrays.asList("2", "3", "5", "4", "1"));
 
         programmers.addAll(Arrays.asList(p1, p2, p3, p4, p5));
-        companies.addAll(Arrays.asList(c1, c2, c3, c4, c5));
+        companies.addAll(Arrays.asList(c1, c2, c3, c4, c5));*/
+
+        Programmer p1 = new Programmer("1", Arrays.asList("D", "A", "B", "C"));
+        Programmer p2 = new Programmer("2", Arrays.asList("B", "D", "A", "C"));
+        Programmer p3 = new Programmer("3", Arrays.asList("B", "C", "A", "D"));
+        Programmer p4 = new Programmer("4", Arrays.asList("A", "B", "C", "D"));
+
+        Company c1 = new Company("A", Arrays.asList("2", "4", "1", "3"));
+        Company c2 = new Company("B", Arrays.asList("2", "1", "3", "4"));
+        Company c3 = new Company("C", Arrays.asList("1", "2", "3", "4"));
+        Company c4 = new Company("D", Arrays.asList("3", "4", "2", "1"));
+
+        programmers.addAll(Arrays.asList(p1, p2, p3, p4));
+        companies.addAll(Arrays.asList(c1, c2, c3, c4));
+
 
         Map<Programmer, Company> matching = findSatisfactoryMatching(programmers, companies);
 
@@ -79,9 +96,11 @@ public class StableMatching {
         }
         return null;
     }
-    // returns true if another company is preferred over current, which is 1/2 the case for an unsatisfactory pairing
+    // this method is called in a situation where we have am unpaired programmer whose top 
+    // preference is a company which is already paired with another programmer. This method 
+    // returns true if the company prefers the unpaired programmer over its current match.
     public static boolean isCompanyPreferredOverCurrent(Programmer programmer, Programmer currentMatch, Company company) {
-        return programmer.preferences.indexOf(company.name) < programmer.preferences.indexOf(currentMatch.matchedCompany);
+        return company.preferences.indexOf(programmer.name) < company.preferences.indexOf(currentMatch.name);
     }
     // method to return the name of a company 
     public static Company getCompanyByName(List<Company> companies, String name) {
