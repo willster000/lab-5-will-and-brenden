@@ -12,7 +12,7 @@ public class StableMatching {
         // programmers and then use programmers.addAll() or companies.addAll() as 
         // seen in the examples.    
          
-      Programmer p1 = new Programmer("1", Arrays.asList("E", "A", "D", "B", "C"));
+        Programmer p1 = new Programmer("1", Arrays.asList("E", "A", "D", "B", "C"));
         Programmer p2 = new Programmer("2", Arrays.asList("D", "E", "B", "A", "C"));
         Programmer p3 = new Programmer("3", Arrays.asList("D", "B", "C", "E", "A"));
         Programmer p4 = new Programmer("4", Arrays.asList("C", "B", "D", "A", "E"));
@@ -65,10 +65,10 @@ public class StableMatching {
         Company c1 = new Company("A", Arrays.asList("2", "3", "1", "4"));
         Company c2 = new Company("B", Arrays.asList("2", "4", "3", "1"));
         Company c3 = new Company("C", Arrays.asList("3", "2", "4", "1"));
-        Company c4 = new Company("D", Arrays.asList("2", "3", "1", "4")); */
+        Company c4 = new Company("D", Arrays.asList("2", "3", "1", "4")); 
 
         programmers.addAll(Arrays.asList(p1, p2, p3, p4));
-        companies.addAll(Arrays.asList(c1, c2, c3, c4));
+        companies.addAll(Arrays.asList(c1, c2, c3, c4)); */ 
 
 
         Map<Programmer, Company> matching = findSatisfactoryMatching(programmers, companies);
