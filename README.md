@@ -2,6 +2,12 @@
 
 The code in StableMatching.java implements the Gale-Shapley Algorithm to solve the stable matching problem. 
 
+We have the results of several different runs with different input in the tests.txt file. 
+
+Each input results in a output with no unsatisfactory pairs as far as we can tell. 
+
+
+
 
 
 Sources:
