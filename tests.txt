@@ -1,0 +1,76 @@
+Input 1:
+Programmer p1 = new Programmer("1", Arrays.asList("D", "A", "B", "C"));
+Programmer p2 = new Programmer("2", Arrays.asList("B", "D", "A", "C"));
+Programmer p3 = new Programmer("3", Arrays.asList("B", "C", "A", "D"));
+Programmer p4 = new Programmer("4", Arrays.asList("A", "B", "C", "D"));
+
+Company c1 = new Company("A", Arrays.asList("2", "4", "1", "3"));
+Company c2 = new Company("B", Arrays.asList("2", "1", "3", "4"));
+Company c3 = new Company("C", Arrays.asList("1", "2", "3", "4"));
+Company c4 = new Company("D", Arrays.asList("3", "4", "2", "1"));
+
+Output 1: 
+3 - C
+4 - A
+2 - B
+1 - D
+
+Input 2: 
+Programmer p1 = new Programmer("1", Arrays.asList("E", "A", "D", "B", "C"));
+Programmer p2 = new Programmer("2", Arrays.asList("D", "E", "B", "A", "C"));
+Programmer p3 = new Programmer("3", Arrays.asList("D", "B", "C", "E", "A"));
+Programmer p4 = new Programmer("4", Arrays.asList("C", "B", "D", "A", "E"));
+Programmer p5 = new Programmer("5", Arrays.asList("A", "D", "B", "C", "E"));
+
+Company c1 = new Company("A", Arrays.asList("2", "5", "1", "3", "4"));
+Company c2 = new Company("B", Arrays.asList("1", "2", "3", "4", "5"));
+Company c3 = new Company("C", Arrays.asList("5", "3", "2", "1", "4"));
+Company c4 = new Company("D", Arrays.asList("1", "3", "2", "4", "5"));
+Company c5 = new Company("E", Arrays.asList("2", "3", "5", "4", "1"));
+
+Output 2: 
+3 - B
+5 - A
+4 - C
+2 - E
+1 - D
+
+Input 3:         
+Programmer p1 = new Programmer("1", Arrays.asList("A", "F", "D", "B", "C", "E"));
+Programmer p2 = new Programmer("2", Arrays.asList("B", "E", "A", "D", "C", "F"));
+Programmer p3 = new Programmer("3", Arrays.asList("C", "D", "F", "E", "A", "B"));
+Programmer p4 = new Programmer("4", Arrays.asList("D", "C", "A", "B", "E", "F"));
+Programmer p5 = new Programmer("5", Arrays.asList("E", "B", "A", "C", "D", "F"));
+Programmer p6 = new Programmer("6", Arrays.asList("F", "A", "B", "C", "E", "D"));
+
+Company c1 = new Company("A", Arrays.asList("2", "5", "1", "3", "4", "6"));
+Company c2 = new Company("B", Arrays.asList("1", "2", "3", "6", "4", "5"));
+Company c3 = new Company("C", Arrays.asList("5", "6", "3", "2", "1", "4"));
+Company c4 = new Company("D", Arrays.asList("1", "3", "2", "4", "5", "6"));
+Company c5 = new Company("E", Arrays.asList("6", "2", "3", "5", "4", "1"));
+Company c6 = new Company("F", Arrays.asList("2", "3", "5", "4", "6", "1"));
+
+Output 3: 
+3 - C
+5 - E
+4 - D
+6 - F
+2 - B
+1 - A
+
+Input 4: 
+Programmer p1 = new Programmer("1", Arrays.asList("B", "D", "A", "C"));
+Programmer p2 = new Programmer("2", Arrays.asList("B", "D", "C", "A"));
+Programmer p3 = new Programmer("3", Arrays.asList("B", "A", "D", "C"));
+Programmer p4 = new Programmer("4", Arrays.asList("D", "C", "A", "B"));
+
+Company c1 = new Company("A", Arrays.asList("2", "3", "1", "4"));
+Company c2 = new Company("B", Arrays.asList("2", "4", "3", "1"));
+Company c3 = new Company("C", Arrays.asList("3", "2", "4", "1"));
+Company c4 = new Company("D", Arrays.asList("2", "3", "1", "4"));
+
+Output 4: 
+3 - A
+4 - C
+2 - B
+1 - D
